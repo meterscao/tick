@@ -1,0 +1,11 @@
+/* Reset */
+/*
+body{margin:8px;}
+p{-webkit-margin-before: 1em;-webkit-margin-after: 1em;}
+*/
+body,p,h1,h2,h3,h4,ul,ol,li,dl, dt, dd,form{margin: 0;padding:0;font-size: 100%;}
+
+ul,ol{list-style: none;}
+a{text-decoration:none;}
+body{line-height: 1.6;font-size: 14px;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3"}
+em{font-style:normal}

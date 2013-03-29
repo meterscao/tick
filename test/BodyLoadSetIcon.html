@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>onload修改link</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    </head>
+<body onload="setIcon()">
+<div class="lay-page" id="">	
+    本页面将在每次body.onload事件后读出打开的次数，生成下面的图片，并把这个图片添加至head。<br/>
+    先添加页面至主屏幕，在webapp模式下打开再退出检查桌面启动图标。<br />
+    图标上的数字标识出页面被打开的次数，在每次打开再退出后图标上的数字将加1。<br />
+    <a href="javascript:return false;" onclick="resetlocalStorage()">重置LocalStorage</a>        
+</div>
+
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+function setIcon(){
+    var num;
+        if (localStorage.num)  {
+            localStorage.num++;
+            num = localStorage.num;
+        }
+        else {
+            localStorage.num=1;
+            num = localStorage.num;
+        }
+        
+
+        var img = new Image();
+        var canvas = document.createElement('canvas');
+        canvas.width = 144;
+        canvas.height = 144;
+        var context = canvas.getContext("2d");
+        context.fillStyle="#ef4372";
+        context.fillRect(0,0,144,144);
+        context.textAlign="center";
+        context.fillStyle = '#ffffff';
+        context.textBaseline = "middle";
+        context.font = "bold 90px HelveticaNeue";
+        context.fillText(num,70, 70);
+        var baseImg = canvas.toDataURL();            
+        $('head').append('<link id="touchIcon" rel="apple-touch-icon-precomposed" href="' + baseImg + '" />');
+        $("body").append('<img src="'+baseImg +'" />');
+}
+       
+
+function resetlocalStorage()
+{
+    localStorage.clear();
+    location.reload();
+}   
+</script>   
+</body>
+</html>

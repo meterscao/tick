@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>onload修改link</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    </head>
+<body onload="setIcon()">
+<div class="lay-page" id="">	
+        
+</div>
+
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+function setIcon(){
+    var num;
+        if (localStorage.num)  {
+            localStorage.num++;
+            num = localStorage.num;
+        }
+        else {
+            localStorage.num=1;
+            num = localStorage.num;
+        }
+        
+        var canvas = document.createElement('canvas');
+        canvas.width = 144;
+        canvas.height = 144;
+        var context = canvas.getContext("2d");
+        var img = new Image();
+        img.src="img/flower.png";
+        img.onload=function()
+        {
+        
+        context.drawImage(img,0,0);
+        var baseImg = canvas.toDataURL();            
+        $('head').append('<link id="touchIcon" rel="apple-touch-icon-precomposed" href="' + baseImg + '" />');
+        $("body").append(baseImg);
+    }
+}
+       
+
+function resetlocalStorage()
+{
+    localStorage.clear();
+    location.reload();
+}   
+</script>   
+</body>
+</html>

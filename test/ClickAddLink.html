@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS创建的link</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">    
+    </head>
+<body>
+<div class="lay-page" id="">	
+	本页面默认没有link，此时添加到主屏幕的桌面icon为页面截图。<br /><a href="javascript:return false" onclick="addlink()">点击这里通过JS创建link</a> 
+</div>
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+function addlink(){    
+        $('head').append('<link rel="apple-touch-icon-precomposed" href="../img/demo.png" />');        
+        $('.lay-page').append('<br>已创建link~ 添加到主屏幕检查');
+
+}
+
+        
+</script>   
+</body>
+</html>
