@@ -56,7 +56,7 @@ IOS允许网站开发者像NativeaApp一样在IOS设备的主屏幕为其网站�
     
     ![][4]
     
-         http://av.cm/tick/img/demo.png
+         http://tmt.io/tick/img/demo.png
         
     
     但如果是动态gif图片只会截取一帧（第一帧？）来显示
@@ -112,13 +112,13 @@ IOS允许网站开发者像NativeaApp一样在IOS设备的主屏幕为其网站�
     
     ![][6]
     
-    > <http://av.cm/tick/test/DefaultLink.html>
+    > <http://tmt.io/tick/test/DefaultLink.html>
 
 *   通过点击触发生成的link，仍然可以生成到桌面
     
     ![][7]
 
-> <http://av.cm/tick/test/ClickAddLink.html>
+> <http://tmt.io/tick/test/ClickAddLink.html>
 
 我们期望的场景是，用户在webapp里进行了一项操作，这个操作更新了整个webapp的状态，我们希望这个状态的改变能在桌面的启动图标里体现出来。
 
@@ -140,7 +140,7 @@ IOS允许网站开发者像NativeaApp一样在IOS设备的主屏幕为其网站�
     
     ![][7]
     
-    > <http://av.cm/tick/test/BodyLoadSetIcon.html>
+    > <http://tmt.io/tick/test/BodyLoadSetIcon.html>
     > 
     > 本页面将在每次body.onload事件后读出打开的次数，生成下面的图片，并把这个图片添加至head。
     > 
@@ -152,7 +152,7 @@ IOS允许网站开发者像NativeaApp一样在IOS设备的主屏幕为其网站�
     
     ![][8]
     
-    > <http://av.cm/tick/test/ClickSetIcon.html>
+    > <http://tmt.io/tick/test/ClickSetIcon.html>
     > 
     > 本页面在载入的时页面头部并没有link标签，通过点击操作读出打开的次数，生成下面的图片，并把这个图片添加至head。
     > 
@@ -177,11 +177,11 @@ IOS允许网站开发者像NativeaApp一样在IOS设备的主屏幕为其网站�
 
 ![][9]
 
-> <http://av.cm/tick/>
+> <http://tmt.io/tick/>
 
 <br>
 
-<img style="width:240px" src="http://av.cm/tick/src/1.png" /><img style="width:240px" src="http://av.cm/tick/src/2.png" /><img style="width:240px" src="http://av.cm/tick/src/3.png" />
+<img style="width:240px" src="http://tmt.io/tick/src/1.png" /><img style="width:240px" src="http://tmt.io/tick/src/2.png" /><img style="width:240px" src="http://tmt.io/tick/src/3.png" />
 
 第一次添加到主屏幕时显示的是从Safari里默认的初始图片（这里是一个灯泡），当更新了任务列表之后，桌面上的启动图标将会显示任务列表里未完成的任务，除此之外：
 
@@ -205,9 +205,9 @@ webapp因为权限的原因，尚不能做到：
 但是，Apple在IOS设备的主屏幕上为webapp开了一扇窗户，我们也许可以通过这扇窗为用户带来特别的体验。
 
  [1]: http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
- [2]: http://av.cm/tick/src/diff.png
+ [2]: http://tmt.io/tick/src/diff.png
  [3]: http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html#//apple_ref/doc/uid/TP40006556-CH14
- [4]: http://av.cm/tick/img/demo.png
+ [4]: http://tmt.io/tick/img/demo.png
  [5]: http://getimg.in/144x144tcat
  [6]: https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl=http%3A%2F%2Fav.cm%2Ftick%2Ftest%2FDefaultLink.html
  [7]: https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl=http%3A%2F%2Fav.cm%2Ftick%2Ftest%2FClickAddLink.html
